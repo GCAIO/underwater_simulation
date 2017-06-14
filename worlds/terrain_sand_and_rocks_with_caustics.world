@@ -1,0 +1,3356 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.2 0.5 0.5 1</ambient>
+      <background>0.2 0.5 0.5 1</background>
+      <shadows>1</shadows>
+      <fog>
+        <color>0.2 0.5 0.5 1</color>
+        <type>linear</type>
+        <start>1</start>
+        <end>15</end>
+        <density>0.1</density>
+      </fog>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>0.676289 47.7499 22.2543 -0 0.507642 -1.58698</pose>
+        <view_controller>ortho</view_controller>
+        <projection_type>orthographic</projection_type>
+      </camera>
+    </gui>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <include>
+      <name>terrain</name>
+      <pose frame=''>0 0 0 0.0 0.0 0.0</pose> 
+      <static>1</static>
+      <uri>model://terreno_con_onda_caustica</uri>
+    </include>
+    <include>
+      <!--name>camera</name-->
+      <pose frame=''>0 0 5 0.0 1.20 0.79</pose>
+      <static>0</static>
+      <uri>model://movable_camera</uri>
+    </include>
+    <model name='RockSet_1.0_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>30.2228 41.1971 0.296169 2.79472 0.26903 -2.90601</pose>
+    </model>
+    <model name='RockSet_1.1_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.63122 -2.30611 0.296167 2.96318 0.399543 2.8745</pose>
+    </model>
+    <model name='RockSet_1.2_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>41.2018 14.0495 0.296167 -3.0386 -0.42401 -0.454958</pose>
+    </model>
+    <model name='RockSet_1.3_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-25.3371 -36.3579 0.296169 -3.09885 0.433624 2.339</pose>
+    </model>
+    <model name='RockSet_1.4_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-53.365 76.6832 -3880.69 -1.73308 -0.575984 -0.918094</pose>
+    </model>
+    <model name='RockSet_1.5_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-20.0095 13.8962 0.302647 -3.03118 0.378669 1.42274</pose>
+    </model>
+    <model name='RockSet_1.6_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>27.375 2.28066 0.296168 2.90148 0.367032 3.03919</pose>
+    </model>
+    <model name='RockSet_1.7_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-14.5126 30.4569 0.299051 -2.90863 0.273166 2.67646</pose>
+    </model>
+    <model name='RockSet_1.8_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-41.4107 -30.8221 0.296162 -2.79305 0.266786 1.49727</pose>
+    </model>
+    <model name='RockSet_1.9_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-48.2086 -4.46215 0.296169 -3.01765 -0.418677 -0.403836</pose>
+    </model>
+    <model name='RockSet_1.10_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>35.1912 -23.2313 0.296168 -2.75138 -0.19879 0.421964</pose>
+    </model>
+    <model name='RockSet_1.11_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>17.0453 3.24448 0.296168 -3.02492 0.420655 2.16091</pose>
+    </model>
+    <model name='RockSet_1.12_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>22.2861 -21.2362 0.296158 -2.71142 -0.070769 0.716759</pose>
+    </model>
+    <model name='RockSet_1.13_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_1/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-32.8492 -5.87233 0.296167 2.77237 -0.236654 -1.72719</pose>
+    </model>
+    <model name='RockSet_2.0_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>39.2684 -15.2853 0.238788 -3.05969 -0.089142 -0.751421</pose>
+    </model>
+    <model name='RockSet_2.1_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>35.6596 -5.83693 0.1813 0.081694 -0.002444 0.577575</pose>
+    </model>
+    <model name='RockSet_2.2_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>40.6226 -1.8582 0.181291 0.065084 -0.049497 -0.04175</pose>
+    </model>
+    <model name='RockSet_2.3_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>38.061 14.1045 0.181469 0.042835 0.023616 2.41244</pose>
+    </model>
+    <model name='RockSet_2.4_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-18.8319 -4.34767 0.181462 0.045745 0.006627 2.49085</pose>
+    </model>
+    <model name='RockSet_2.5_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-8.53314 -33.0683 0.181518 0.009251 -0.03265 2.22806</pose>
+    </model>
+    <model name='RockSet_2.6_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>25.1001 48.1305 0.238799 3.08797 -0.108489 -1.95648</pose>
+    </model>
+    <model name='RockSet_2.7_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-13.6161 -20.6762 0.181291 0.069464 -0.043149 0.053856</pose>
+    </model>
+    <model name='RockSet_2.8_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>23.2646 -37.8669 0.238796 -3.08258 -0.105665 -0.985777</pose>
+    </model>
+    <model name='RockSet_2.9_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>45.3062 -44.8141 0.238795 3.02294 0.023612 3.02047</pose>
+    </model>
+    <model name='RockSet_2.10_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>23.2542 15.5163 0.181303 -0.062571 0.05226 3.05027</pose>
+    </model>
+    <model name='RockSet_2.11_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-36.4687 2.38868 0.181471 0.041814 -0.025227 1.36337</pose>
+    </model>
+    <model name='RockSet_2.12_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>31.9263 7.16433 0.181471 0.047074 -0.011841 1.68466</pose>
+    </model>
+    <model name='RockSet_2.13_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_2/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-29.4976 38.96 0.181453 0.011158 0.044723 -2.60567</pose>
+    </model>
+    <model name='RockSet_3.0_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-42.7209 -49.6002 0.226398 -3.12322 -0.09167 -2.79906</pose>
+    </model>
+    <model name='RockSet_3.1_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-10.7456 40.9872 0.226404 -3.04826 0.00758 -1.34713</pose>
+    </model>
+    <model name='RockSet_3.2_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-4.8803 18.3672 0.142173 -0.088815 0.034454 -3.05525</pose>
+    </model>
+    <model name='RockSet_3.3_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>48.9768 7.86555 0.142173 -0.042822 -0.085104 -1.58226</pose>
+    </model>
+    <model name='RockSet_3.4_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>24.9149 33.5027 0.142173 -0.062544 -0.071882 -1.83247</pose>
+    </model>
+    <model name='RockSet_3.5_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>24.3091 40.272 0.142173 0.094168 -0.01431 0.305079</pose>
+    </model>
+    <model name='RockSet_3.6_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>32.8767 39.2361 0.142173 0.070292 0.064325 1.19538</pose>
+    </model>
+    <model name='RockSet_3.7_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-26.7705 20.035 0.231103 -3.07783 -0.139906 -2.6091</pose>
+    </model>
+    <model name='RockSet_3.8_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>13.1827 -27.4927 0.142173 0.091135 0.02772 0.749913</pose>
+    </model>
+    <model name='RockSet_3.9_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>4.32745 22.0693 0.142173 -0.034245 -0.088895 -1.48363</pose>
+    </model>
+    <model name='RockSet_3.10_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-4.90684 -16.675 0.142173 0.03398 0.088996 1.66094</pose>
+    </model>
+    <model name='RockSet_3.11_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_3/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>9.63025 33.4203 0.142173 0.086343 0.040258 0.890683</pose>
+    </model>
+    <model name='RockSet_4.0_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-19.689 21.29 0.104572 0.210218 -0.105184 -0.531074</pose>
+    </model>
+    <model name='RockSet_4.1_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>19.7452 17.3324 0.156337 -3.02009 -0.00624 -1.23517</pose>
+    </model>
+    <model name='RockSet_4.2_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>12.5591 23.067 0.119422 -0.329455 -0.207013 -2.88205</pose>
+    </model>
+    <model name='RockSet_4.3_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>18.3693 15.2281 0.14041 -0.139387 0.743277 1.83978</pose>
+    </model>
+    <model name='RockSet_4.4_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>37.5922 18.6887 0.098026 -0.0161 0.021387 1.0663</pose>
+    </model>
+    <model name='RockSet_4.5_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>9.30349 16.5082 0.107536 0.075943 0.170782 2.02249</pose>
+    </model>
+    <model name='RockSet_4.6_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-30.9961 48.2713 0.153768 -3.01889 0.018885 -1.47588</pose>
+    </model>
+    <model name='RockSet_4.7_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-6.29219 45.8603 0.181039 1.6898 0.000963 -0.102594</pose>
+    </model>
+    <model name='RockSet_4.8_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>18.5734 -11.0302 0.171433 2.92671 -0.09027 1.99797</pose>
+    </model>
+    <model name='RockSet_4.9_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-30.9278 28.9916 0.150733 -3.10765 -0.085081 1.33475</pose>
+    </model>
+    <model name='RockSet_4.10_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>37.3316 0.479018 0.161087 -0.442252 0.258282 0.930901</pose>
+    </model>
+    <model name='RockSet_4.11_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.012134 -4.09329 0.173001 -0.562736 -1.04158 -2.5677</pose>
+    </model>
+    <model name='RockSet_4.12_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>18.283 22.8901 0.137962 -0.082336 0.501325 1.26297</pose>
+    </model>
+    <model name='RockSet_4.13_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_4/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>22.3278 -32.368 0.159882 0.632763 0.048444 -0.598684</pose>
+    </model>
+    <model name='RockSet_5.0_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-14.2046 -16.9831 0.182962 2.83778 -0.025539 -0.397824</pose>
+    </model>
+    <model name='RockSet_5.1_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>31.6369 -0.351404 0.142991 0.335593 -0.184995 -1.835</pose>
+    </model>
+    <model name='RockSet_5.2_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-24.3561 -34.8508 0.112892 0.022184 0.287081 -1.788</pose>
+    </model>
+    <model name='RockSet_5.3_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-21.0974 -16.707 0.149594 2.90953 0.267205 1.93253</pose>
+    </model>
+    <model name='RockSet_5.4_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-23.3035 15.8994 0.169804 -2.83097 0.022191 1.14548</pose>
+    </model>
+    <model name='RockSet_5.5_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>12.5521 1.3827 0.198744 1.58196 -0.38313 -3.08763</pose>
+    </model>
+    <model name='RockSet_5.6_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-10.885 -25.7453 0.183296 0.617678 -0.130957 -1.23998</pose>
+    </model>
+    <model name='RockSet_5.7_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-16.27 39.6707 0.118853 -0.288345 0.123993 0.264735</pose>
+    </model>
+    <model name='RockSet_5.8_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>27.217 -20.9692 0.179599 2.44995 -0.547697 -2.64248</pose>
+    </model>
+    <model name='RockSet_5.9_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-4.90931 48.8138 0.225557 -0.679098 0.912924 3.12956</pose>
+    </model>
+    <model name='RockSet_5.10_static'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://RockSet_5/meshes/RockSet.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-40.6946 -40.4176 0.21217 0.727897 -0.672735 0.779297</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>150 370000000</sim_time>
+      <real_time>261 443089184</real_time>
+      <wall_time>1472822876 589368501</wall_time>
+      <iterations>150370</iterations>
+      <model name='ROV'>
+        <pose frame=''>-45 -45 4 0 0.55 0.79</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-45 -45 4 0 0.55 0.79</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.0_static'>
+        <pose frame=''>30.2228 41.1971 0.296169 2.79472 0.26903 -2.90601</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>30.2228 41.1971 0.296169 2.79472 0.26903 -2.90601</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.10_static'>
+        <pose frame=''>35.1912 -23.2313 0.296168 -2.75138 -0.19879 0.421964</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>35.1912 -23.2313 0.296168 -2.75138 -0.19879 0.421964</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.11_static'>
+        <pose frame=''>17.0453 3.24448 0.296168 -3.02492 0.420655 2.16091</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>17.0453 3.24448 0.296168 -3.02492 0.420655 2.16091</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.12_static'>
+        <pose frame=''>22.2861 -21.2362 0.296158 -2.71142 -0.070769 0.716759</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>22.2861 -21.2362 0.296158 -2.71142 -0.070769 0.716759</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.13_static'>
+        <pose frame=''>-32.8492 -5.87233 0.296167 2.77237 -0.236654 -1.72719</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-32.8492 -5.87233 0.296167 2.77237 -0.236654 -1.72719</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.1_static'>
+        <pose frame=''>5.63122 -2.30611 0.296167 2.96318 0.399543 2.8745</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.63122 -2.30611 0.296167 2.96318 0.399543 2.8745</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.2_static'>
+        <pose frame=''>41.2018 14.0495 0.296167 -3.0386 -0.42401 -0.454958</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>41.2018 14.0495 0.296167 -3.0386 -0.42401 -0.454958</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.3_static'>
+        <pose frame=''>-25.3371 -36.3579 0.296169 -3.09885 0.433624 2.339</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-25.3371 -36.3579 0.296169 -3.09885 0.433624 2.339</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.4_static'>
+        <pose frame=''>-53.365 76.6832 -3880.69 -1.73308 -0.575984 -0.918094</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-53.365 76.6832 -3880.69 -1.73308 -0.575984 -0.918094</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.5_static'>
+        <pose frame=''>-20.0095 13.8962 0.302647 -3.03118 0.378669 1.42274</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-20.0095 13.8962 0.302647 -3.03118 0.378669 1.42274</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.6_static'>
+        <pose frame=''>27.375 2.28066 0.296168 2.90148 0.367032 3.03919</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>27.375 2.28066 0.296168 2.90148 0.367032 3.03919</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.7_static'>
+        <pose frame=''>-14.5126 30.4569 0.299051 -2.90863 0.273166 2.67646</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-14.5126 30.4569 0.299051 -2.90863 0.273166 2.67646</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.8_static'>
+        <pose frame=''>-41.4107 -30.8221 0.296162 -2.79305 0.266786 1.49727</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-41.4107 -30.8221 0.296162 -2.79305 0.266786 1.49727</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_1.9_static'>
+        <pose frame=''>-48.2086 -4.46215 0.296169 -3.01765 -0.418677 -0.403836</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-48.2086 -4.46215 0.296169 -3.01765 -0.418677 -0.403836</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.0_static'>
+        <pose frame=''>39.2684 -15.2853 0.238788 -3.05969 -0.089142 -0.751421</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>39.2684 -15.2853 0.238788 -3.05969 -0.089142 -0.751421</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.10_static'>
+        <pose frame=''>23.2542 15.5163 0.181303 -0.062571 0.05226 3.05027</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>23.2542 15.5163 0.181303 -0.062571 0.05226 3.05027</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.11_static'>
+        <pose frame=''>-36.4687 2.38868 0.181471 0.041814 -0.025227 1.36337</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-36.4687 2.38868 0.181471 0.041814 -0.025227 1.36337</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.12_static'>
+        <pose frame=''>31.9263 7.16433 0.181471 0.047074 -0.011841 1.68466</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>31.9263 7.16433 0.181471 0.047074 -0.011841 1.68466</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.13_static'>
+        <pose frame=''>-29.4976 38.96 0.181453 0.011158 0.044723 -2.60567</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-29.4976 38.96 0.181453 0.011158 0.044723 -2.60567</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.1_static'>
+        <pose frame=''>35.6596 -5.83693 0.1813 0.081694 -0.002444 0.577575</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>35.6596 -5.83693 0.1813 0.081694 -0.002444 0.577575</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.2_static'>
+        <pose frame=''>40.6226 -1.8582 0.181291 0.065084 -0.049497 -0.04175</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>40.6226 -1.8582 0.181291 0.065084 -0.049497 -0.04175</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.3_static'>
+        <pose frame=''>38.061 14.1045 0.181469 0.042835 0.023616 2.41244</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>38.061 14.1045 0.181469 0.042835 0.023616 2.41244</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.4_static'>
+        <pose frame=''>-18.8319 -4.34767 0.181462 0.045745 0.006627 2.49085</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-18.8319 -4.34767 0.181462 0.045745 0.006627 2.49085</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.5_static'>
+        <pose frame=''>-8.53314 -33.0683 0.181518 0.009251 -0.03265 2.22806</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-8.53314 -33.0683 0.181518 0.009251 -0.03265 2.22806</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.6_static'>
+        <pose frame=''>25.1001 48.1305 0.238799 3.08797 -0.108489 -1.95648</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>25.1001 48.1305 0.238799 3.08797 -0.108489 -1.95648</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.7_static'>
+        <pose frame=''>-13.6161 -20.6762 0.181291 0.069464 -0.043149 0.053856</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-13.6161 -20.6762 0.181291 0.069464 -0.043149 0.053856</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.8_static'>
+        <pose frame=''>23.2646 -37.8669 0.238796 -3.08258 -0.105665 -0.985777</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>23.2646 -37.8669 0.238796 -3.08258 -0.105665 -0.985777</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_2.9_static'>
+        <pose frame=''>45.3062 -44.8141 0.238795 3.02294 0.023612 3.02047</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>45.3062 -44.8141 0.238795 3.02294 0.023612 3.02047</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.0_static'>
+        <pose frame=''>-42.7209 -49.6002 0.226398 -3.12322 -0.09167 -2.79906</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-42.7209 -49.6002 0.226398 -3.12322 -0.09167 -2.79906</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.10_static'>
+        <pose frame=''>-4.90684 -16.675 0.142173 0.03398 0.088996 1.66094</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.90684 -16.675 0.142173 0.03398 0.088996 1.66094</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.11_static'>
+        <pose frame=''>9.63025 33.4203 0.142173 0.086343 0.040258 0.890683</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>9.63025 33.4203 0.142173 0.086343 0.040258 0.890683</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.1_static'>
+        <pose frame=''>-10.7456 40.9872 0.226404 -3.04826 0.00758 -1.34713</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10.7456 40.9872 0.226404 -3.04826 0.00758 -1.34713</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.2_static'>
+        <pose frame=''>-4.8803 18.3672 0.142173 -0.088815 0.034454 -3.05525</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.8803 18.3672 0.142173 -0.088815 0.034454 -3.05525</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.3_static'>
+        <pose frame=''>48.9768 7.86555 0.142173 -0.042822 -0.085104 -1.58226</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>48.9768 7.86555 0.142173 -0.042822 -0.085104 -1.58226</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.4_static'>
+        <pose frame=''>24.9149 33.5027 0.142173 -0.062544 -0.071882 -1.83247</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>24.9149 33.5027 0.142173 -0.062544 -0.071882 -1.83247</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.5_static'>
+        <pose frame=''>24.3091 40.272 0.142173 0.094168 -0.01431 0.305079</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>24.3091 40.272 0.142173 0.094168 -0.01431 0.305079</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.6_static'>
+        <pose frame=''>32.8767 39.2361 0.142173 0.070292 0.064325 1.19538</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>32.8767 39.2361 0.142173 0.070292 0.064325 1.19538</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.7_static'>
+        <pose frame=''>-26.7705 20.035 0.231103 -3.07783 -0.139906 -2.6091</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-26.7705 20.035 0.231103 -3.07783 -0.139906 -2.6091</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.8_static'>
+        <pose frame=''>13.1827 -27.4927 0.142173 0.091135 0.02772 0.749913</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>13.1827 -27.4927 0.142173 0.091135 0.02772 0.749913</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_3.9_static'>
+        <pose frame=''>4.32745 22.0693 0.142173 -0.034245 -0.088895 -1.48363</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>4.32745 22.0693 0.142173 -0.034245 -0.088895 -1.48363</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.0_static'>
+        <pose frame=''>-19.689 21.29 0.104572 0.210218 -0.105184 -0.531074</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-19.689 21.29 0.104572 0.210218 -0.105184 -0.531074</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.10_static'>
+        <pose frame=''>37.3316 0.479018 0.161087 -0.442252 0.258282 0.930901</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>37.3316 0.479018 0.161087 -0.442252 0.258282 0.930901</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.11_static'>
+        <pose frame=''>0.012134 -4.09329 0.173001 -0.562736 -1.04158 -2.5677</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.012134 -4.09329 0.173001 -0.562736 -1.04158 -2.5677</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.12_static'>
+        <pose frame=''>18.283 22.8901 0.137962 -0.082336 0.501325 1.26297</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>18.283 22.8901 0.137962 -0.082336 0.501325 1.26297</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.13_static'>
+        <pose frame=''>22.3278 -32.368 0.159882 0.632763 0.048444 -0.598684</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>22.3278 -32.368 0.159882 0.632763 0.048444 -0.598684</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.1_static'>
+        <pose frame=''>19.7452 17.3324 0.156337 -3.02009 -0.00624 -1.23517</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>19.7452 17.3324 0.156337 -3.02009 -0.00624 -1.23517</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.2_static'>
+        <pose frame=''>12.5591 23.067 0.119422 -0.329455 -0.207013 -2.88205</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>12.5591 23.067 0.119422 -0.329455 -0.207013 -2.88205</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.3_static'>
+        <pose frame=''>18.3693 15.2281 0.14041 -0.139387 0.743277 1.83978</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>18.3693 15.2281 0.14041 -0.139387 0.743277 1.83978</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.4_static'>
+        <pose frame=''>37.5922 18.6887 0.098026 -0.0161 0.021387 1.0663</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>37.5922 18.6887 0.098026 -0.0161 0.021387 1.0663</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.5_static'>
+        <pose frame=''>9.30349 16.5082 0.107536 0.075943 0.170782 2.02249</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>9.30349 16.5082 0.107536 0.075943 0.170782 2.02249</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.6_static'>
+        <pose frame=''>-30.9961 48.2713 0.153768 -3.01889 0.018885 -1.47588</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-30.9961 48.2713 0.153768 -3.01889 0.018885 -1.47588</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.7_static'>
+        <pose frame=''>-6.29219 45.8603 0.181039 1.6898 0.000963 -0.102594</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-6.29219 45.8603 0.181039 1.6898 0.000963 -0.102594</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.8_static'>
+        <pose frame=''>18.5734 -11.0302 0.171433 2.92671 -0.09027 1.99797</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>18.5734 -11.0302 0.171433 2.92671 -0.09027 1.99797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_4.9_static'>
+        <pose frame=''>-30.9278 28.9916 0.150733 -3.10765 -0.085081 1.33475</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-30.9278 28.9916 0.150733 -3.10765 -0.085081 1.33475</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.0_static'>
+        <pose frame=''>-14.2046 -16.9831 0.182962 2.83778 -0.025539 -0.397824</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-14.2046 -16.9831 0.182962 2.83778 -0.025539 -0.397824</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.10_static'>
+        <pose frame=''>-40.6946 -40.4176 0.21217 0.727897 -0.672735 0.779297</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-40.6946 -40.4176 0.21217 0.727897 -0.672735 0.779297</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.1_static'>
+        <pose frame=''>31.6369 -0.351404 0.142991 0.335593 -0.184995 -1.835</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>31.6369 -0.351404 0.142991 0.335593 -0.184995 -1.835</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.2_static'>
+        <pose frame=''>-24.3561 -34.8508 0.112892 0.022184 0.287081 -1.788</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-24.3561 -34.8508 0.112892 0.022184 0.287081 -1.788</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.3_static'>
+        <pose frame=''>-21.0974 -16.707 0.149594 2.90953 0.267205 1.93253</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-21.0974 -16.707 0.149594 2.90953 0.267205 1.93253</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.4_static'>
+        <pose frame=''>-23.3035 15.8994 0.169804 -2.83097 0.022191 1.14548</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-23.3035 15.8994 0.169804 -2.83097 0.022191 1.14548</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.5_static'>
+        <pose frame=''>12.5521 1.3827 0.198744 1.58196 -0.38313 -3.08763</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>12.5521 1.3827 0.198744 1.58196 -0.38313 -3.08763</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.6_static'>
+        <pose frame=''>-10.885 -25.7453 0.183296 0.617678 -0.130957 -1.23998</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10.885 -25.7453 0.183296 0.617678 -0.130957 -1.23998</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.7_static'>
+        <pose frame=''>-16.27 39.6707 0.118853 -0.288345 0.123993 0.264735</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-16.27 39.6707 0.118853 -0.288345 0.123993 0.264735</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.8_static'>
+        <pose frame=''>27.217 -20.9692 0.179599 2.44995 -0.547697 -2.64248</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>27.217 -20.9692 0.179599 2.44995 -0.547697 -2.64248</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='RockSet_5.9_static'>
+        <pose frame=''>-4.90931 48.8138 0.225557 -0.679098 0.912924 3.12956</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.90931 48.8138 0.225557 -0.679098 0.912924 3.12956</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+  </world>
+</sdf>

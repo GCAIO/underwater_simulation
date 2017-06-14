@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name='terreno_escarpado'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <!--geometry>
+            <box>
+              <size>100 100 0.1</size>
+            </box>
+          </geometry-->
+          <geometry>
+            <mesh>
+              <uri>model://assets/meshes/terrain_escarpado_prueba.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <!--cast_shadows>true</cast_shadows>
+	  <laser_retro>true</laser_retro-->
+          <geometry>
+            <mesh>
+              <uri>model://assets/meshes/terrain_escarpado_prueba.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://assets/materials/scripts</uri>
+              <uri>model://assets/materials/textures/sand</uri>
+	      <uri>model://assets/materials/textures/terrain</uri>
+	      <uri>model://assets/materials/textures/rocks/3D_pattern_66/pattern_391</uri>
+              <name>Underwater/Sand_And_Rocks5</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+      </link>
+    </model>
+</sdf>

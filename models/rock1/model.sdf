@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="rock1">
+    <link name="link">
+      <inertial>
+        <mass>10.0</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://rock1/meshes/RockSet.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://rock1/meshes/RockSet.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <self_collide>false</self_collide>
+      <kinematic>false</kinematic>
+      <gravity>true</gravity>
+    </link>
+  </model>
+</sdf>
